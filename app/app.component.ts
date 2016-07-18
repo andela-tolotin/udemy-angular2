@@ -9,4 +9,5 @@ import {CoursesComponent} from './courses.component'
     `,
     directives: [CoursesComponent] 
 })
-export class AppComponent {}
+export class AppComponent {
+}

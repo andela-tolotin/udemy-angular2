@@ -9,21 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var course_service_1 = require('./course.service');
-var CoursesComponent = (function () {
-    function CoursesComponent(_courseService) {
-        this.title = 'My Courses';
-        this.courses = _courseService.getCourses();
+var CourseService = (function () {
+    function CourseService() {
     }
-    CoursesComponent = __decorate([
-        core_1.Component({
-            selector: 'courses',
-            template: "\n    <h2>{{ title }}</h2>\n    <ul>\n      <li *ngFor=\"#course of courses\">\n        {{ course }}\n      </li>\n    </ul>\n    ",
-            providers: [course_service_1.CourseService]
-        }), 
-        __metadata('design:paramtypes', [course_service_1.CourseService])
-    ], CoursesComponent);
-    return CoursesComponent;
+    CourseService.prototype.getCourses = function () {
+        return ['Course One', 'Course Two', 'Course Three'];
+    };
+    CourseService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [])
+    ], CourseService);
+    return CourseService;
 }());
-exports.CoursesComponent = CoursesComponent;
-//# sourceMappingURL=courses.component.js.map
+exports.CourseService = CourseService;
+//# sourceMappingURL=course.service.js.map
